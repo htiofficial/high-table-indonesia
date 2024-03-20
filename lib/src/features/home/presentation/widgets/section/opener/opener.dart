@@ -48,36 +48,38 @@ class MyOpener extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 48),
             child: RoundedBlock(
               color: AppColors.blockColor,
-              padding: const EdgeInsets.fromLTRB(
-                16,
-                16,
-                16,
-                0,
-              ),
               child: Column(
                 children: [
-                  Row(
-                    children: [
-                      const MyText(
-                        text: "HTI",
-                        fontSize: AppFontSize.heading,
-                        fontWeight: AppFontWeight.bold,
-                      ),
-                      const MyText(
-                        text: " 2024",
-                        fontSize: AppFontSize.heading,
-                        fontWeight: AppFontWeight.bold,
-                        color: AppColors.primaryColor,
-                      ),
-                      const Spacer(),
-                      MyButton(
-                        labelText: 'Contact Us',
-                        onPressed: () {},
-                        padding: const EdgeInsets.fromLTRB(16, 16, 16, 16),
-                      ),
-                    ],
+                  Padding(
+                    padding: const EdgeInsets.all(16),
+                    child: Row(
+                      children: [
+                        const MyText(
+                          text: "HTI",
+                          fontSize: AppFontSize.heading,
+                          fontWeight: AppFontWeight.bold,
+                        ),
+                        const MyText(
+                          text: " 2024",
+                          fontSize: AppFontSize.heading,
+                          fontWeight: AppFontWeight.bold,
+                          color: AppColors.primaryColor,
+                        ),
+                        const Spacer(),
+                        MyButton(
+                          labelText: 'Contact Us',
+                          onPressed: () {},
+                          padding: const EdgeInsets.fromLTRB(
+                            16,
+                            16,
+                            16,
+                            16,
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
-                  const SizedBox(height: 100),
+                  const SizedBox(height: 80),
                   SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
                     child: Row(
@@ -133,10 +135,10 @@ class MyOpener extends StatelessWidget {
                             const SizedBox(height: 48),
                           ],
                         ),
-                        const SizedBox(width: 120),
+                        const SizedBox(width: 100),
                         Image.asset(
                           'assets/images/dasboard.png',
-                          height: 440,
+                          height: 460,
                           // width: 720,
                         ),
                       ],
