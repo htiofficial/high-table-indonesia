@@ -1,0 +1,37 @@
+name: hti_indonesia
+description: "Human Capital Information Indonesia."
+publish_to: "none"
+version: 1.0.0
+
+environment:
+  sdk: ">=3.2.3 <4.0.0"
+
+dependencies:
+  device_frame: ^1.1.0
+  firebase_core: ^2.27.0
+  flutter:
+    sdk: flutter
+    
+  flutter_localizations:
+    sdk: flutter
+  intl: ^0.18.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+  fonts:
+    - family: Helvetica
+      fonts:
+        - asset: assets/fonts/HelveticaNeueMedium.otf
+          weight: 500
+        - asset: assets/fonts/HelveticaNeueBold.otf
+          weight: 600
+        - asset: assets/fonts/HelveticaNeueHeavy.otf
+          weight: 700
