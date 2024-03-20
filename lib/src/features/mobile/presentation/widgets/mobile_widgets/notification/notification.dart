@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:hti_indonesia/src/config/colors/colors.dart';
+import 'package:hti_indonesia/src/config/font/font.dart';
 import 'package:hti_indonesia/src/features/mobile/data/models/notif.dart';
 import 'package:hti_indonesia/src/features/mobile/presentation/widgets/mobile_widgets/notification/notification_list.dart';
+import 'package:hti_indonesia/src/global/widgets/text/my_text.dart';
 
 class MyNotificationPage extends StatelessWidget {
-  const MyNotificationPage({super.key});
+  final dynamic onPressed;
+
+  const MyNotificationPage({required this.onPressed, super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -67,8 +72,33 @@ class MyNotificationPage extends StatelessWidget {
       ),
     ];
 
-    return SizedBox(
-      child: NotifList(notifs: notifs),
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      mainAxisSize: MainAxisSize.max,
+      children: [
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16),
+          child: TextButton(
+            onPressed: onPressed,
+            child: const Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Icon(
+                  Icons.arrow_back_ios_new,
+                  color: AppColors.baseBlack,
+                ),
+                SizedBox(width: 4),
+                MyText(
+                  text: 'Notification',
+                  fontSize: AppFontSize.body,
+                  fontWeight: AppFontWeight.bold,
+                ),
+              ],
+            ),
+          ),
+        ),
+        Expanded(child: NotifList(notifs: notifs)),
+      ],
     );
   }
 }

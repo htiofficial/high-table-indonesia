@@ -61,19 +61,19 @@ class MyOpener extends StatelessWidget {
                       const MyText(
                         text: "HTI",
                         fontSize: AppFontSize.heading,
-                        fontWeight: AppFontWeight.semiBold,
+                        fontWeight: AppFontWeight.bold,
                       ),
                       const MyText(
                         text: " 2024",
                         fontSize: AppFontSize.heading,
-                        fontWeight: AppFontWeight.semiBold,
+                        fontWeight: AppFontWeight.bold,
                         color: AppColors.primaryColor,
                       ),
                       const Spacer(),
                       MyButton(
                         labelText: 'Contact Us',
                         onPressed: () {},
-                        padding: const EdgeInsets.fromLTRB(16, 16, 16, 14),
+                        padding: const EdgeInsets.fromLTRB(16, 16, 16, 16),
                       ),
                     ],
                   ),
@@ -89,7 +89,7 @@ class MyOpener extends StatelessWidget {
                             const MyText(
                               text: "High Table\nIndonesia",
                               fontSize: 120,
-                              fontWeight: AppFontWeight.semiBold,
+                              fontWeight: AppFontWeight.bold,
                               textAlign: TextAlign.start,
                               // height: 0.9,
                             ),
@@ -102,7 +102,7 @@ class MyOpener extends StatelessWidget {
                                     style: TextStyle(
                                         fontFamily: 'Helvetica',
                                         fontSize: AppFontSize.heading,
-                                        fontWeight: AppFontWeight.normal,
+                                        fontWeight: AppFontWeight.medium,
                                         color: AppColors.baseBlack),
                                     children: [
                                       TextSpan(
@@ -111,7 +111,7 @@ class MyOpener extends StatelessWidget {
                                       TextSpan(
                                         text: 'quality',
                                         style: TextStyle(
-                                          fontWeight: AppFontWeight.semiBold,
+                                          fontWeight: AppFontWeight.bold,
                                           color: AppColors.primaryColor,
                                         ),
                                       ),
@@ -119,7 +119,7 @@ class MyOpener extends StatelessWidget {
                                       TextSpan(
                                         text: 'speed',
                                         style: TextStyle(
-                                          fontWeight: AppFontWeight.semiBold,
+                                          fontWeight: AppFontWeight.bold,
                                           color: AppColors.primaryColor,
                                         ),
                                       ),

@@ -7,7 +7,10 @@ import 'package:hti_indonesia/src/global/widgets/text/my_text.dart';
 class MyRollingBanner extends StatelessWidget {
   final List<String> listText;
 
-  const MyRollingBanner({required this.listText, super.key});
+  const MyRollingBanner({
+    required this.listText,
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -15,12 +18,7 @@ class MyRollingBanner extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 48),
       child: RoundedBlock(
         color: AppColors.primaryColor,
-        padding: const EdgeInsets.fromLTRB(
-          0,
-          20,
-          0,
-          16,
-        ),
+        padding: const EdgeInsets.symmetric(vertical: 16),
         child: SingleChildScrollView(
           scrollDirection: Axis.horizontal,
           child: Wrap(

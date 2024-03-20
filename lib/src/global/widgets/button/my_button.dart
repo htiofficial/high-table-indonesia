@@ -16,7 +16,7 @@ class MyButton extends StatefulWidget {
     required this.labelText,
     required this.onPressed,
     this.isOutline = false,
-    this.padding = const EdgeInsets.fromLTRB(16, 16, 16, 14),
+    this.padding = const EdgeInsets.fromLTRB(16, 16, 16, 16),
     this.color = AppColors.primaryColor,
     this.height = 36,
     this.radius = 24,
@@ -92,7 +92,7 @@ class _MyButtonState extends State<MyButton> {
             widget.labelText,
             style: TextStyle(
               color: widget.isOutline ? AppColors.baseBlack : Colors.white,
-              fontWeight: AppFontWeight.semiBold,
+              fontWeight: AppFontWeight.bold,
               fontSize: widget.fontSize,
             ),
           ),

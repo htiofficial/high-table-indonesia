@@ -57,7 +57,7 @@ class MyExpertiseItem extends StatelessWidget {
                             16,
                             16,
                             16,
-                            14,
+                            16,
                           ),
                           onPressed: onTap,
                         )
@@ -68,7 +68,7 @@ class MyExpertiseItem extends StatelessWidget {
                             16,
                             16,
                             16,
-                            14,
+                            16,
                           ),
                           onPressed: () {},
                         ),

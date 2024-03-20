@@ -5,7 +5,6 @@ import 'package:hti_indonesia/src/features/mobile/presentation/widgets/mobile_wi
 import 'package:hti_indonesia/src/features/mobile/presentation/widgets/mobile_widgets/my_footer.dart';
 import 'package:hti_indonesia/src/features/mobile/presentation/widgets/mobile_widgets/my_header.dart';
 import 'package:hti_indonesia/src/features/mobile/presentation/widgets/mobile_widgets/my_navbar.dart';
-import 'package:hti_indonesia/src/features/mobile/presentation/widgets/mobile_widgets/notification/notification.dart';
 import 'package:hti_indonesia/src/global/widgets/text/my_text.dart';
 
 class MobileApp extends StatefulWidget {
@@ -33,7 +32,10 @@ class _MobileAppState extends State<MobileApp> {
       ),
     ),
     const Center(
-      child: MyNotificationPage(),
+      child: MyText(
+        text: "Under Development",
+        fontSize: AppFontSize.caption,
+      ),
     ),
     const Center(
       child: MyText(

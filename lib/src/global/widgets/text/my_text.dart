@@ -6,7 +6,7 @@ class MyText extends StatelessWidget {
   const MyText({
     required this.text,
     required this.fontSize,
-    this.fontWeight = AppFontWeight.normal,
+    this.fontWeight = AppFontWeight.medium,
     this.fontStyle,
     this.color = AppColors.baseBlack,
     this.textDecoration,
@@ -30,15 +30,13 @@ class MyText extends StatelessWidget {
     return Text(
       text,
       style: TextStyle(
-        fontSize: fontSize,
-        fontWeight: fontWeight,
-        color: color,
-        fontStyle: fontStyle,
-        decoration: textDecoration,
-        decorationColor: color,
-        height: height
-        
-      ),
+          fontSize: fontSize,
+          fontWeight: fontWeight,
+          color: color,
+          fontStyle: fontStyle,
+          decoration: textDecoration,
+          decorationColor: color,
+          height: height),
       textAlign: textAlign,
       overflow: overflow,
     );

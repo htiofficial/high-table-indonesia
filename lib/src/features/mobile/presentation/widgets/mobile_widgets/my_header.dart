@@ -33,7 +33,7 @@ class MyHeaderMobile extends StatelessWidget {
                 MyText(
                   text: DateFormat.Hm().format(DateTime.now()).toString(),
                   fontSize: 14,
-                  fontWeight: AppFontWeight.semiBold,
+                  fontWeight: AppFontWeight.bold,
                 ),
                 const Spacer(),
                 const Icon(

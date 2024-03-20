@@ -5,7 +5,9 @@ import 'package:hti_indonesia/src/features/mobile/presentation/widgets/mobile_wi
 import 'package:hti_indonesia/src/global/widgets/text/my_text.dart';
 
 class MyProfile extends StatelessWidget {
-  const MyProfile({super.key});
+  final dynamic onPressed;
+
+  const MyProfile({required this.onPressed, super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -28,9 +30,9 @@ class MyProfile extends StatelessWidget {
           MyText(
             text: getGreeting(),
             fontSize: AppFontSize.body,
-            fontWeight: AppFontWeight.semiBold,
+            fontWeight: AppFontWeight.bold,
           ),
-          const SizedBox(height: 12),
+          const SizedBox(height: 10),
           Row(
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
@@ -56,18 +58,20 @@ class MyProfile extends StatelessWidget {
                   MyText(
                     text: 'Travis Scott',
                     fontSize: AppFontSize.body,
-                    fontWeight: AppFontWeight.medium,
+                    fontWeight: AppFontWeight.bold,
                   ),
                   SizedBox(height: 4),
                   MyText(
                     text: 'Senior Manager',
                     fontSize: AppFontSize.body,
-                    fontWeight: AppFontWeight.normal,
                   ),
                 ],
               ),
               const Spacer(),
-              const MyNotification(),
+              GestureDetector(
+                onTap: onPressed,
+                child: const MyNotification(),
+              ),
             ],
           ),
         ],

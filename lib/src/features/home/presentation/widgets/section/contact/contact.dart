@@ -44,6 +44,7 @@ class MyContact extends StatelessWidget {
                         MyText(
                           text: "Call (ID)",
                           fontSize: AppFontSize.heading,
+                          fontWeight: AppFontWeight.bold,
                           color: AppColors.primaryColor,
                         ),
                         SizedBox(height: 12),
@@ -71,6 +72,7 @@ class MyContact extends StatelessWidget {
                         MyText(
                           text: "Email",
                           fontSize: AppFontSize.heading,
+                          fontWeight: AppFontWeight.bold,
                           color: AppColors.primaryColor,
                         ),
                         SizedBox(height: 12),

@@ -195,7 +195,7 @@ class _MyTableState extends State<MyTable> {
                 const MyText(
                   text: "Master Product",
                   fontSize: AppFontSize.heading,
-                  fontWeight: AppFontWeight.semiBold,
+                  fontWeight: AppFontWeight.bold,
                 ),
                 MyButton(
                   labelText: 'Add Product',

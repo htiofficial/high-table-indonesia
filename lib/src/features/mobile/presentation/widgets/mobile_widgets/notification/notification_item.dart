@@ -25,7 +25,7 @@ class NotifItem extends StatelessWidget {
               child: MyText(
                 text: 'Hari Ini',
                 fontSize: AppFontSize.body,
-                fontWeight: AppFontWeight.semiBold,
+                fontWeight: AppFontWeight.bold,
                 textAlign: TextAlign.start,
               ),
             ),
@@ -35,7 +35,7 @@ class NotifItem extends StatelessWidget {
               child: MyText(
                 text: 'Minggu Ini',
                 fontSize: AppFontSize.body,
-                fontWeight: AppFontWeight.semiBold,
+                fontWeight: AppFontWeight.bold,
                 textAlign: TextAlign.start,
               ),
             ),
@@ -45,7 +45,7 @@ class NotifItem extends StatelessWidget {
               child: MyText(
                 text: 'Bulan Ini',
                 fontSize: AppFontSize.body,
-                fontWeight: AppFontWeight.semiBold,
+                fontWeight: AppFontWeight.bold,
                 textAlign: TextAlign.start,
               ),
             ),
@@ -77,7 +77,7 @@ class NotifItem extends StatelessWidget {
                     MyText(
                       text: catNotif.notif.judul,
                       fontSize: AppFontSize.caption,
-                      fontWeight: AppFontWeight.semiBold,
+                      fontWeight: AppFontWeight.bold,
                       textAlign: TextAlign.start,
                     ),
                     const SizedBox(height: 4),

@@ -11,8 +11,9 @@ class MyAttendance extends StatelessWidget {
     return Container(
       decoration: const BoxDecoration(
         color: AppColors.neutral100,
-        borderRadius: BorderRadius.all(
-          Radius.circular(16),
+        borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(16),
+          topRight: Radius.circular(16),
         ),
       ),
       width: double.maxFinite,
@@ -24,11 +25,11 @@ class MyAttendance extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SizedBox(height: 8),
+            SizedBox(height: 4),
             MyText(
               text: "Today Attendance",
-              fontSize: AppFontSize.description,
-              fontWeight: AppFontWeight.medium,
+              fontSize: AppFontSize.body,
+              fontWeight: AppFontWeight.bold,
             ),
             SizedBox(height: 8),
             Row(
@@ -119,18 +120,18 @@ class MyRoundedInfo extends StatelessWidget {
                     color: AppColors.primaryColor,
                   ),
                 ),
-                SizedBox(width: 8),
+                const SizedBox(width: 8),
                 MyText(
                   text: title,
                   fontSize: AppFontSize.caption,
                 ),
               ],
             ),
-            const SizedBox(height: 12),
+            const SizedBox(height: 8),
             MyText(
               text: value,
               fontSize: AppFontSize.body,
-              fontWeight: AppFontWeight.medium,
+              fontWeight: AppFontWeight.bold,
             ),
             const SizedBox(height: 8),
             MyText(
