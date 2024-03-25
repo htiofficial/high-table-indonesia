@@ -23,7 +23,7 @@ class NotifItem extends StatelessWidget {
             const Padding(
               padding: EdgeInsets.symmetric(vertical: 12),
               child: MyText(
-                text: 'Hari Ini',
+                text: 'Today',
                 fontSize: AppFontSize.body,
                 fontWeight: AppFontWeight.bold,
                 textAlign: TextAlign.start,
@@ -33,7 +33,7 @@ class NotifItem extends StatelessWidget {
             const Padding(
               padding: EdgeInsets.symmetric(vertical: 12),
               child: MyText(
-                text: 'Minggu Ini',
+                text: 'This Week',
                 fontSize: AppFontSize.body,
                 fontWeight: AppFontWeight.bold,
                 textAlign: TextAlign.start,
@@ -43,7 +43,7 @@ class NotifItem extends StatelessWidget {
             const Padding(
               padding: EdgeInsets.symmetric(vertical: 12),
               child: MyText(
-                text: 'Bulan Ini',
+                text: 'This Month',
                 fontSize: AppFontSize.body,
                 fontWeight: AppFontWeight.bold,
                 textAlign: TextAlign.start,

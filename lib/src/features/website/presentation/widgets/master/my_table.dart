@@ -221,14 +221,14 @@ class _MyTableState extends State<MyTable> {
                 defaultVerticalAlignment: TableCellVerticalAlignment.middle,
                 defaultColumnWidth: const IntrinsicColumnWidth(),
                 // columnWidths: const {
-                //   0: FixedColumnWidth(32),
-                //   1: FixedColumnWidth(240),
-                //   2: FixedColumnWidth(240),
-                //   3: FixedColumnWidth(240),
-                //   4: FixedColumnWidth(96),
-                //   5: FixedColumnWidth(240),
-                //   6: FixedColumnWidth(240),
-                //   7: FixedColumnWidth(240),
+                //   0: FlexColumnWidth(1),
+                //   1: FlexColumnWidth(1),
+                //   2: FlexColumnWidth(2),
+                //   3: FlexColumnWidth(1),
+                //   4: FlexColumnWidth(1),
+                //   5: FlexColumnWidth(1),
+                //   6: FlexColumnWidth(1),
+                //   7: FlexColumnWidth(1),
                 // },
                 border: TableBorder.all(
                   color: AppColors.blockColor,
@@ -297,7 +297,7 @@ class _MyTableState extends State<MyTable> {
                           child: MyText(
                             text: formatCurrency(
                               value: _listProduct[i].price *
-                                  (1 + _listProduct[i].promo),
+                                  (1 - _listProduct[i].promo),
                             ),
                             fontSize: AppFontSize.body,
                           ),

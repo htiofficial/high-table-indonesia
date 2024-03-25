@@ -8,6 +8,8 @@ class MyTextFormField extends StatefulWidget {
   final dynamic onTap;
   final dynamic onChanged;
   final dynamic onFieldSubmitted;
+  final dynamic validator;
+  final dynamic autovalidateMode;
   final String? hintText;
   final bool? obscureText;
   final int? maxLength;
@@ -28,6 +30,8 @@ class MyTextFormField extends StatefulWidget {
       required this.labelText,
       this.onTap,
       this.onFieldSubmitted,
+      this.validator,
+      this.autovalidateMode,
       this.hintText,
       this.maxLength,
       this.minLines,
@@ -146,6 +150,8 @@ class _MyTextFormFieldState extends State<MyTextFormField> {
       inputFormatters: widget.inputFormatters,
       maxLength: widget.maxLength,
       keyboardType: widget.keyboardType,
+      validator: widget.validator,
+      autovalidateMode: widget.autovalidateMode,
       decoration: InputDecoration(
         contentPadding: const EdgeInsets.fromLTRB(16, 16, 0, 16),
         labelText: widget.labelText,
@@ -170,6 +176,22 @@ class _MyTextFormFieldState extends State<MyTextFormField> {
             color: focusedBorderColor,
           ),
           borderRadius: const BorderRadius.all(
+            Radius.circular(8),
+          ),
+        ),
+        errorBorder: const OutlineInputBorder(
+          borderSide: BorderSide(
+            color: AppColors.errorColor,
+          ),
+          borderRadius: BorderRadius.all(
+            Radius.circular(8),
+          ),
+        ),
+        focusedErrorBorder: const OutlineInputBorder(
+          borderSide: BorderSide(
+            color: AppColors.errorColor,
+          ),
+          borderRadius: BorderRadius.all(
             Radius.circular(8),
           ),
         ),

@@ -32,7 +32,7 @@ class MyProfile extends StatelessWidget {
             fontSize: AppFontSize.body,
             fontWeight: AppFontWeight.bold,
           ),
-          const SizedBox(height: 10),
+          const SizedBox(height: 12),
           Row(
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [

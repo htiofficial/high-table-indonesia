@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:hti_indonesia/src/config/colors/colors.dart';
-import 'package:hti_indonesia/src/config/font/font.dart';
 import 'package:hti_indonesia/src/features/mobile/data/models/notif.dart';
+import 'package:hti_indonesia/src/features/mobile/presentation/widgets/mobile_widgets/my_back_header.dart';
 import 'package:hti_indonesia/src/features/mobile/presentation/widgets/mobile_widgets/notification/notification_list.dart';
-import 'package:hti_indonesia/src/global/widgets/text/my_text.dart';
 
 class MyNotificationPage extends StatelessWidget {
   final dynamic onPressed;
 
-  const MyNotificationPage({required this.onPressed, super.key});
+  const MyNotificationPage({
+    required this.onPressed,
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -76,26 +77,9 @@ class MyNotificationPage extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisSize: MainAxisSize.max,
       children: [
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16),
-          child: TextButton(
-            onPressed: onPressed,
-            child: const Row(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Icon(
-                  Icons.arrow_back_ios_new,
-                  color: AppColors.baseBlack,
-                ),
-                SizedBox(width: 4),
-                MyText(
-                  text: 'Notification',
-                  fontSize: AppFontSize.body,
-                  fontWeight: AppFontWeight.bold,
-                ),
-              ],
-            ),
-          ),
+        MyBackHeader(
+          title: 'Notification',
+          onPressed: onPressed,
         ),
         Expanded(child: NotifList(notifs: notifs)),
       ],

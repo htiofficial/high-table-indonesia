@@ -4,27 +4,13 @@ import 'package:hti_indonesia/src/features/mobile/presentation/widgets/mobile_wi
 import 'package:hti_indonesia/src/features/mobile/presentation/widgets/mobile_widgets/home/my_profile.dart';
 import 'package:hti_indonesia/src/features/mobile/presentation/widgets/mobile_widgets/notification/notification.dart';
 
-// class MyHome extends StatelessWidget {
-//   const MyHome({super.key});
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return const Column(
-//       crossAxisAlignment: CrossAxisAlignment.start,
-//       mainAxisSize: MainAxisSize.max,
-//       children: [
-//         MyProfile(),
-//         SizedBox(height: 16),
-//         MyAttendance(),
-//         SizedBox(height: 6),
-//         MyNews(),
-//       ],
-//     );
-//   }
-// }
-
 class MyHome extends StatefulWidget {
-  const MyHome({super.key});
+  const MyHome({
+    required this.attendanceFunction,
+    super.key,
+  });
+
+  final List attendanceFunction;
 
   @override
   State<MyHome> createState() => _MyHomeState();
@@ -47,11 +33,14 @@ class _MyHomeState extends State<MyHome> {
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisSize: MainAxisSize.max,
       children: [
+        const SizedBox(height: 24),
         MyProfile(
           onPressed: _changeWidget,
         ),
-        const SizedBox(height: 12),
-        const MyAttendance(),
+        const SizedBox(height: 24),
+        MyAttendance(
+          attendanceFunction: widget.attendanceFunction,
+        ),
         const MyNews(),
       ],
     );

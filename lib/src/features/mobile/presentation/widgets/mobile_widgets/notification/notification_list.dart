@@ -29,7 +29,7 @@ class NotifList extends StatelessWidget {
             padding: EdgeInsets.symmetric(vertical: 24),
             child: Center(
               child: MyText(
-                text: 'Tidak ada data yang dapat dimuat lagi',
+                text: 'No more data to show',
                 fontSize: AppFontSize.description,
                 color: AppColors.neutralColor,
               ),

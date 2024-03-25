@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:hti_indonesia/src/features/home/presentation/widgets/section/about/about.dart';
-import 'package:hti_indonesia/src/features/home/presentation/widgets/section/contact/contact.dart';
-import 'package:hti_indonesia/src/features/home/presentation/widgets/section/expertise/expertise.dart';
-import 'package:hti_indonesia/src/features/home/presentation/widgets/section/opener/opener.dart';
+import 'package:hti_indonesia/src/features/home/presentation/widgets/about/about.dart';
+import 'package:hti_indonesia/src/features/home/presentation/widgets/contact/contact.dart';
+import 'package:hti_indonesia/src/features/home/presentation/widgets/expertise/expertise.dart';
+import 'package:hti_indonesia/src/features/home/presentation/widgets/opener/opener.dart';
 import 'package:hti_indonesia/src/global/widgets/footer/footer.dart';
 
 class DashboardPage extends StatefulWidget {
@@ -19,7 +19,14 @@ class _DashboardPageState extends State<DashboardPage> {
     double footerHeight = 96;
     return Scaffold(
       body: LayoutBuilder(builder: (context, constraint) {
+        String type = 'web';
+        if (constraint.maxWidth < 700) {
+          type = 'mobile';
+          footerHeight = 116;
+        }
+
         double screenHeight = constraint.maxHeight - footerHeight;
+
         return SingleChildScrollView(
           child: ConstrainedBox(
             constraints: BoxConstraints(minHeight: screenHeight),
@@ -27,22 +34,25 @@ class _DashboardPageState extends State<DashboardPage> {
               mainAxisSize: MainAxisSize.max,
               children: [
                 // opener
-                const MyOpener(),
+                MyOpener(type: type),
 
                 // expertise
-                const MyExpertise(),
+                MyExpertise(type: type),
 
                 // contact
-                const MyContact(),
+                MyContact(type: type),
 
                 // about
-                const MyAbout(),
+                MyAbout(type: type),
 
                 if (contentHeight < screenHeight)
                   SizedBox(height: screenHeight - contentHeight),
 
                 // footer
-                MyFooter(height: footerHeight),
+                MyFooter(
+                  height: footerHeight,
+                  type: type,
+                ),
               ],
             ),
           ),

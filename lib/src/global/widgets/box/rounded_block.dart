@@ -17,6 +17,7 @@ class RoundedBlock extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      clipBehavior: Clip.hardEdge,
       padding: padding,
       width: width,
       decoration: BoxDecoration(
